@@ -33,7 +33,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BaseBinaryTree<T>
         else if(data.compareTo(nodo.getData()) < 0){
             nodo.setLeft(insertNode(data, nodo.getLeft()));
         }else if(data.compareTo(nodo.getData()) > 0){
-            nodo.setRight(insertNode(data, nodo.getLeft()));
+            nodo.setRight(insertNode(data, nodo.getRight()));
         }else {
             // cuando sea igual al data de un nodo.
             throw new IllegalArgumentException("BST contiene un nodo con esta key " + data);

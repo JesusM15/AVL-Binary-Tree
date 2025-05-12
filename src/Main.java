@@ -8,6 +8,8 @@ public class Main {
         tree.insertNode(20);
         tree.insertNode(4);
         tree.insertNode(9);
+        tree.insertNode(6);
+        tree.insertNode(8);
 
         System.out.println(tree);
     }
