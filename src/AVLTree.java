@@ -93,15 +93,15 @@ public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T> {
         return node != null ? node.getHeight() : -1;
     }
 
-    @Override
-    protected void appendNodeToString(Nodo<T> nodo, StringBuilder builder) {
-        builder
-                .append(nodo.getData())
-                .append("[H=")
-                .append(height(nodo))
-                .append(", BF=")
-                .append(balanceFactor(nodo))
-                .append(']');
-    }
+//    @Override
+//    public void appendNodeToString(Nodo<T> nodo, StringBuilder builder) {
+//        builder
+//                .append(nodo.getData())
+////                .append("[H=")
+////                .append(height(nodo))
+////                .append(", BF=")
+////                .append(balanceFactor(nodo))
+//                .append(']');
+//    }
 
 }

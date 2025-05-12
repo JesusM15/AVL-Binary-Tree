@@ -19,7 +19,7 @@ public class BaseBinaryTree<T extends Comparable<T>>implements BinaryTree<T> {
         return builder.toString();
     }
 
-    private void appendNodeToStringRecursive(Nodo<T> node, StringBuilder builder) {
+    public void appendNodeToStringRecursive(Nodo<T> node, StringBuilder builder) {
         appendNodeToString(node, builder);
         if (node.getLeft() != null) {
             builder.append(" L{");
@@ -33,7 +33,7 @@ public class BaseBinaryTree<T extends Comparable<T>>implements BinaryTree<T> {
         }
     }
 
-    protected void appendNodeToString(Nodo<T> node, StringBuilder builder) {
+    public void appendNodeToString(Nodo<T> node, StringBuilder builder) {
         builder.append(node.getData());
     }
 }
