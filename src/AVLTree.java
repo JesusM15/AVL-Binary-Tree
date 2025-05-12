@@ -2,6 +2,28 @@ import static java.lang.Math.max;
 
 public class AVLTree<T extends Comparable<T>> extends BinarySearchTree<T> {
 
+    @Override
+    public Nodo<T> insertNode(T data, Nodo<T> node) {
+        node = super.insertNode(data, node);
+
+        updateHeight(node);
+
+        return rebalance(node);
+    }
+
+    @Override
+    public Nodo<T> deleteNode(T data, Nodo<T> node) {
+        node = super.deleteNode(data, node);
+
+        if (node == null) {
+            return null;
+        }
+
+        updateHeight(node);
+
+        return rebalance(node);
+    }
+
     private void updateHeight(Nodo<T> node) {
         int leftChildHeight = height(node.getLeft());
         int rightChildHeight = height(node.getRight());

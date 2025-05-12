@@ -46,7 +46,7 @@ public class BinarySearchTree<T extends Comparable<T>> extends BaseBinaryTree<T>
         super.setRoot(deleteNode(data, super.getRoot()));
     }
 
-    public Nodo deleteNode(T data, Nodo<T> nodo){
+    public Nodo<T> deleteNode(T data, Nodo<T> nodo){
         if(nodo == null){
             return null;
         }
